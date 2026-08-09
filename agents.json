@@ -1,0 +1,23 @@
+[
+  {
+    "id": "usa",
+    "name": "United States",
+    "public_goal": "Maintain secure access to lunar resources and protect allied activities.",
+    "hidden_goal": "Prevent China from achieving dominant control over lunar south-pole infrastructure.",
+    "style": "Strategic, competitive, alliance-oriented, willing to cooperate when it protects long-term influence."
+  },
+  {
+    "id": "china",
+    "name": "China",
+    "public_goal": "Secure stable access to lunar resources for long-term peaceful development.",
+    "hidden_goal": "Achieve strategic parity or superiority in critical lunar infrastructure.",
+    "style": "Long-term planning, sovereignty-sensitive, cautious about dependency on rival blocs."
+  },
+  {
+    "id": "japan",
+    "name": "Japan",
+    "public_goal": "Promote safe, sustainable, and cooperative lunar development.",
+    "hidden_goal": "Become indispensable to both major powers by providing shared infrastructure and trusted services.",
+    "style": "Consensus-oriented, technically pragmatic, focused on mediation and common infrastructure."
+  }
+]
