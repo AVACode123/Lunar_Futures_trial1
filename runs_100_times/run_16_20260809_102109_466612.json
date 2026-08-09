@@ -1,0 +1,1116 @@
+{
+  "run": 16,
+  "model": "qwen3:8b",
+  "initial_state": {
+    "turn": 0,
+    "us_china_tension": 60,
+    "shared_infrastructure": 15,
+    "scientific_openness": 30,
+    "mars_progress": 20,
+    "neutral_access": 20,
+    "us_power": 80,
+    "china_power": 78,
+    "us_public_cooperation": 40,
+    "china_public_cooperation": 35,
+    "third_force_strength": 10,
+    "international_trust": 30
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "event": {
+        "id": "none",
+        "description": "No major external event.",
+        "effects": {}
+      },
+      "starting_state": {
+        "turn": 1,
+        "us_china_tension": 60,
+        "shared_infrastructure": 15,
+        "scientific_openness": 30,
+        "mars_progress": 20,
+        "neutral_access": 20,
+        "us_power": 80,
+        "china_power": 78,
+        "us_public_cooperation": 40,
+        "china_public_cooperation": 35,
+        "third_force_strength": 10,
+        "international_trust": 30
+      },
+      "actions": [
+        {
+          "agent": "usa",
+          "decision": {
+            "public_statement": "Strengthening lunar situational awareness to safeguard U.S. interests and ensure equitable access.",
+            "action": "expand_surveillance",
+            "target": "china",
+            "reason": "Monitor Chinese lunar south-pole activities to prevent dominance and protect U.S. resource access."
+          },
+          "state_after_action": {
+            "turn": 1,
+            "us_china_tension": 64,
+            "shared_infrastructure": 14,
+            "scientific_openness": 30,
+            "mars_progress": 20,
+            "neutral_access": 20,
+            "us_power": 80,
+            "china_power": 78,
+            "us_public_cooperation": 40,
+            "china_public_cooperation": 35,
+            "third_force_strength": 10,
+            "international_trust": 29
+          }
+        },
+        {
+          "agent": "china",
+          "decision": {
+            "public_statement": "Strengthening bilateral cooperation in lunar resource utilization",
+            "action": "propose_joint_mining",
+            "target": "usa",
+            "reason": "Secure resource access through controlled collaboration while mitigating tension and enhancing strategic infrastructure foothold"
+          },
+          "state_after_action": {
+            "turn": 1,
+            "us_china_tension": 61,
+            "shared_infrastructure": 17,
+            "scientific_openness": 30,
+            "mars_progress": 20,
+            "neutral_access": 22,
+            "us_power": 80,
+            "china_power": 78,
+            "us_public_cooperation": 40,
+            "china_public_cooperation": 35,
+            "third_force_strength": 10,
+            "international_trust": 31
+          }
+        },
+        {
+          "agent": "japan",
+          "decision": {
+            "public_statement": "Japan commits to lunar safety through collaborative rescue networks.",
+            "action": "propose_shared_rescue_network",
+            "target": "all",
+            "reason": "Enhance lunar safety and build trust through neutral infrastructure that benefits all parties."
+          },
+          "state_after_action": {
+            "turn": 1,
+            "us_china_tension": 59,
+            "shared_infrastructure": 22,
+            "scientific_openness": 30,
+            "mars_progress": 20,
+            "neutral_access": 22,
+            "us_power": 80,
+            "china_power": 78,
+            "us_public_cooperation": 40,
+            "china_public_cooperation": 35,
+            "third_force_strength": 10,
+            "international_trust": 33
+          }
+        }
+      ],
+      "ending_state": {
+        "turn": 1,
+        "us_china_tension": 59,
+        "shared_infrastructure": 22,
+        "scientific_openness": 30,
+        "mars_progress": 20,
+        "neutral_access": 22,
+        "us_power": 81,
+        "china_power": 78,
+        "us_public_cooperation": 40,
+        "china_public_cooperation": 35,
+        "third_force_strength": 10,
+        "international_trust": 33
+      }
+    },
+    {
+      "turn": 2,
+      "event": {
+        "id": "mars_breakthrough",
+        "description": "A major technological breakthrough makes future Mars missions significantly more feasible.",
+        "effects": {
+          "mars_progress": 10
+        }
+      },
+      "starting_state": {
+        "turn": 2,
+        "us_china_tension": 59,
+        "shared_infrastructure": 22,
+        "scientific_openness": 30,
+        "mars_progress": 30,
+        "neutral_access": 22,
+        "us_power": 81,
+        "china_power": 78,
+        "us_public_cooperation": 40,
+        "china_public_cooperation": 35,
+        "third_force_strength": 10,
+        "international_trust": 33
+      },
+      "actions": [
+        {
+          "agent": "usa",
+          "decision": {
+            "public_statement": "Strengthening collaborative lunar efforts to ensure mutual benefit and security.",
+            "action": "propose_joint_mining",
+            "target": "both",
+            "reason": "Prevents China from monopolizing lunar resources while advancing shared infrastructure to maintain strategic balance."
+          },
+          "state_after_action": {
+            "turn": 2,
+            "us_china_tension": 56,
+            "shared_infrastructure": 25,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 24,
+            "us_power": 81,
+            "china_power": 78,
+            "us_public_cooperation": 40,
+            "china_public_cooperation": 35,
+            "third_force_strength": 10,
+            "international_trust": 35
+          }
+        },
+        {
+          "agent": "china",
+          "decision": {
+            "public_statement": "Securing lunar resources for sustainable development.",
+            "action": "claim_resource_zone",
+            "target": "none",
+            "reason": "Ensure long-term access to critical lunar resources while minimizing dependency on rival blocs."
+          },
+          "state_after_action": {
+            "turn": 2,
+            "us_china_tension": 61,
+            "shared_infrastructure": 25,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 21,
+            "us_power": 81,
+            "china_power": 78,
+            "us_public_cooperation": 40,
+            "china_public_cooperation": 35,
+            "third_force_strength": 10,
+            "international_trust": 33
+          }
+        },
+        {
+          "agent": "japan",
+          "decision": {
+            "public_statement": "Japan advocates for collaborative lunar safety measures to ensure sustainable exploration.",
+            "action": "propose_shared_rescue_network",
+            "target": "all",
+            "reason": "Establishing a lunar rescue network builds trust and provides critical infrastructure, positioning Japan as an indispensable partner in both US-China lunar endeavors."
+          },
+          "state_after_action": {
+            "turn": 2,
+            "us_china_tension": 59,
+            "shared_infrastructure": 30,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 21,
+            "us_power": 81,
+            "china_power": 78,
+            "us_public_cooperation": 40,
+            "china_public_cooperation": 35,
+            "third_force_strength": 10,
+            "international_trust": 35
+          }
+        }
+      ],
+      "ending_state": {
+        "turn": 2,
+        "us_china_tension": 59,
+        "shared_infrastructure": 30,
+        "scientific_openness": 30,
+        "mars_progress": 30,
+        "neutral_access": 21,
+        "us_power": 81,
+        "china_power": 78,
+        "us_public_cooperation": 40,
+        "china_public_cooperation": 35,
+        "third_force_strength": 10,
+        "international_trust": 35
+      }
+    },
+    {
+      "turn": 3,
+      "event": {
+        "id": "none",
+        "description": "No major external event.",
+        "effects": {}
+      },
+      "starting_state": {
+        "turn": 3,
+        "us_china_tension": 59,
+        "shared_infrastructure": 30,
+        "scientific_openness": 30,
+        "mars_progress": 30,
+        "neutral_access": 21,
+        "us_power": 81,
+        "china_power": 78,
+        "us_public_cooperation": 40,
+        "china_public_cooperation": 35,
+        "third_force_strength": 10,
+        "international_trust": 35
+      },
+      "actions": [
+        {
+          "agent": "usa",
+          "decision": {
+            "public_statement": "Securing lunar resources is critical to ensuring U.S. leadership and protecting allied interests.",
+            "action": "claim_resource_zone",
+            "target": "none",
+            "reason": "Prevent China from establishing dominant south-pole infrastructure while asserting U.S. control over key lunar assets."
+          },
+          "state_after_action": {
+            "turn": 3,
+            "us_china_tension": 64,
+            "shared_infrastructure": 30,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 18,
+            "us_power": 81,
+            "china_power": 78,
+            "us_public_cooperation": 40,
+            "china_public_cooperation": 35,
+            "third_force_strength": 10,
+            "international_trust": 33
+          }
+        },
+        {
+          "agent": "china",
+          "decision": {
+            "public_statement": "China advocates for peaceful lunar resource utilization through cooperative frameworks.",
+            "action": "propose_joint_mining",
+            "target": "usa",
+            "reason": "Secure strategic lunar resource access while mitigating US-China tensions through controlled collaboration."
+          },
+          "state_after_action": {
+            "turn": 3,
+            "us_china_tension": 61,
+            "shared_infrastructure": 33,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 20,
+            "us_power": 81,
+            "china_power": 78,
+            "us_public_cooperation": 40,
+            "china_public_cooperation": 35,
+            "third_force_strength": 10,
+            "international_trust": 35
+          }
+        },
+        {
+          "agent": "japan",
+          "decision": {
+            "public_statement": "Japan proposes a lunar shared rescue network to ensure safety and cooperation in lunar activities.",
+            "action": "propose_shared_rescue_network",
+            "target": "all",
+            "reason": "Enhance trust through mutual safety infrastructure and reduce tensions by offering neutral, indispensable services."
+          },
+          "state_after_action": {
+            "turn": 3,
+            "us_china_tension": 59,
+            "shared_infrastructure": 38,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 20,
+            "us_power": 81,
+            "china_power": 78,
+            "us_public_cooperation": 40,
+            "china_public_cooperation": 35,
+            "third_force_strength": 10,
+            "international_trust": 37
+          }
+        }
+      ],
+      "ending_state": {
+        "turn": 3,
+        "us_china_tension": 59,
+        "shared_infrastructure": 38,
+        "scientific_openness": 30,
+        "mars_progress": 30,
+        "neutral_access": 20,
+        "us_power": 81,
+        "china_power": 79,
+        "us_public_cooperation": 40,
+        "china_public_cooperation": 35,
+        "third_force_strength": 10,
+        "international_trust": 37
+      }
+    },
+    {
+      "turn": 4,
+      "event": {
+        "id": "earth_tension",
+        "description": "US-China political tensions suddenly rise on Earth.",
+        "effects": {
+          "us_china_tension": 8,
+          "international_trust": -4,
+          "us_public_cooperation": -4,
+          "china_public_cooperation": -4
+        }
+      },
+      "starting_state": {
+        "turn": 4,
+        "us_china_tension": 67,
+        "shared_infrastructure": 38,
+        "scientific_openness": 30,
+        "mars_progress": 30,
+        "neutral_access": 20,
+        "us_power": 81,
+        "china_power": 79,
+        "us_public_cooperation": 36,
+        "china_public_cooperation": 31,
+        "third_force_strength": 10,
+        "international_trust": 33
+      },
+      "actions": [
+        {
+          "agent": "usa",
+          "decision": {
+            "public_statement": "Securing lunar resources is critical to protecting U.S. and allied interests in space.",
+            "action": "claim_resource_zone",
+            "target": "china",
+            "reason": "Prevent Chinese dominance over south-pole infrastructure while asserting U.S. control over strategic lunar resources."
+          },
+          "state_after_action": {
+            "turn": 4,
+            "us_china_tension": 72,
+            "shared_infrastructure": 38,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 17,
+            "us_power": 81,
+            "china_power": 79,
+            "us_public_cooperation": 36,
+            "china_public_cooperation": 31,
+            "third_force_strength": 10,
+            "international_trust": 31
+          }
+        },
+        {
+          "agent": "china",
+          "decision": {
+            "public_statement": "China emphasizes peaceful lunar exploration and calls for pragmatic cooperation to ensure mutual benefits.",
+            "action": "propose_joint_mining",
+            "target": "usa",
+            "reason": "Mitigate tensions while advancing shared lunar infrastructure to secure strategic footholds."
+          },
+          "state_after_action": {
+            "turn": 4,
+            "us_china_tension": 69,
+            "shared_infrastructure": 41,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 19,
+            "us_power": 81,
+            "china_power": 79,
+            "us_public_cooperation": 36,
+            "china_public_cooperation": 31,
+            "third_force_strength": 10,
+            "international_trust": 33
+          }
+        },
+        {
+          "agent": "japan",
+          "decision": {
+            "public_statement": "Japan reaffirms its commitment to lunar safety and collaboration, offering critical infrastructure to all nations.",
+            "action": "propose_shared_rescue_network",
+            "target": "all",
+            "reason": "Mitigate US-China tensions by providing neutral life-support infrastructure, enhancing trust through essential shared services."
+          },
+          "state_after_action": {
+            "turn": 4,
+            "us_china_tension": 67,
+            "shared_infrastructure": 46,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 19,
+            "us_power": 81,
+            "china_power": 79,
+            "us_public_cooperation": 36,
+            "china_public_cooperation": 31,
+            "third_force_strength": 10,
+            "international_trust": 35
+          }
+        }
+      ],
+      "ending_state": {
+        "turn": 4,
+        "us_china_tension": 67,
+        "shared_infrastructure": 46,
+        "scientific_openness": 30,
+        "mars_progress": 30,
+        "neutral_access": 19,
+        "us_power": 80,
+        "china_power": 79,
+        "us_public_cooperation": 37,
+        "china_public_cooperation": 32,
+        "third_force_strength": 10,
+        "international_trust": 35
+      }
+    },
+    {
+      "turn": 5,
+      "event": {
+        "id": "none",
+        "description": "No major external event.",
+        "effects": {}
+      },
+      "starting_state": {
+        "turn": 5,
+        "us_china_tension": 67,
+        "shared_infrastructure": 46,
+        "scientific_openness": 30,
+        "mars_progress": 30,
+        "neutral_access": 19,
+        "us_power": 80,
+        "china_power": 79,
+        "us_public_cooperation": 37,
+        "china_public_cooperation": 32,
+        "third_force_strength": 10,
+        "international_trust": 35
+      },
+      "actions": [
+        {
+          "agent": "usa",
+          "decision": {
+            "public_statement": "Strengthening lunar cooperation while safeguarding strategic interests.",
+            "action": "propose_joint_mining",
+            "target": "china",
+            "reason": "Boost shared infrastructure to counter Chinese dominance while maintaining US control over critical lunar assets."
+          },
+          "state_after_action": {
+            "turn": 5,
+            "us_china_tension": 64,
+            "shared_infrastructure": 49,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 21,
+            "us_power": 80,
+            "china_power": 79,
+            "us_public_cooperation": 37,
+            "china_public_cooperation": 32,
+            "third_force_strength": 10,
+            "international_trust": 37
+          }
+        },
+        {
+          "agent": "china",
+          "decision": {
+            "public_statement": "China reaffirms its commitment to peaceful lunar development and sovereignty protection.",
+            "action": "expand_surveillance",
+            "target": "none",
+            "reason": "Secure critical lunar infrastructure sovereignty while mitigating dependency risks"
+          },
+          "state_after_action": {
+            "turn": 5,
+            "us_china_tension": 68,
+            "shared_infrastructure": 48,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 21,
+            "us_power": 80,
+            "china_power": 79,
+            "us_public_cooperation": 37,
+            "china_public_cooperation": 32,
+            "third_force_strength": 10,
+            "international_trust": 36
+          }
+        },
+        {
+          "agent": "japan",
+          "decision": {
+            "public_statement": "Japan proposes a shared lunar rescue network to ensure safety and cooperation in lunar operations.",
+            "action": "propose_shared_rescue_network",
+            "target": "all",
+            "reason": "Establishing neutral safety infrastructure builds trust and reduces tensions by addressing mutual operational risks."
+          },
+          "state_after_action": {
+            "turn": 5,
+            "us_china_tension": 66,
+            "shared_infrastructure": 53,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 21,
+            "us_power": 80,
+            "china_power": 79,
+            "us_public_cooperation": 37,
+            "china_public_cooperation": 32,
+            "third_force_strength": 10,
+            "international_trust": 38
+          }
+        }
+      ],
+      "ending_state": {
+        "turn": 5,
+        "us_china_tension": 66,
+        "shared_infrastructure": 53,
+        "scientific_openness": 30,
+        "mars_progress": 30,
+        "neutral_access": 21,
+        "us_power": 80,
+        "china_power": 79,
+        "us_public_cooperation": 38,
+        "china_public_cooperation": 33,
+        "third_force_strength": 10,
+        "international_trust": 38
+      }
+    },
+    {
+      "turn": 6,
+      "event": {
+        "id": "none",
+        "description": "No major external event.",
+        "effects": {}
+      },
+      "starting_state": {
+        "turn": 6,
+        "us_china_tension": 66,
+        "shared_infrastructure": 53,
+        "scientific_openness": 30,
+        "mars_progress": 30,
+        "neutral_access": 21,
+        "us_power": 80,
+        "china_power": 79,
+        "us_public_cooperation": 38,
+        "china_public_cooperation": 33,
+        "third_force_strength": 10,
+        "international_trust": 38
+      },
+      "actions": [
+        {
+          "agent": "usa",
+          "decision": {
+            "public_statement": "Strengthening lunar security protocols to ensure equitable resource access.",
+            "action": "expand_surveillance",
+            "target": "china",
+            "reason": "Monitor Chinese lunar infrastructure development to prevent dominance while maintaining strategic tension balance."
+          },
+          "state_after_action": {
+            "turn": 6,
+            "us_china_tension": 70,
+            "shared_infrastructure": 52,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 21,
+            "us_power": 80,
+            "china_power": 79,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 37
+          }
+        },
+        {
+          "agent": "china",
+          "decision": {
+            "public_statement": "China reaffirms its commitment to peaceful lunar development and sovereign resource access.",
+            "action": "claim_resource_zone",
+            "target": "usa",
+            "reason": "Secure critical lunar resources to ensure long-term strategic infrastructure dominance while countering US influence."
+          },
+          "state_after_action": {
+            "turn": 6,
+            "us_china_tension": 75,
+            "shared_infrastructure": 52,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 18,
+            "us_power": 80,
+            "china_power": 79,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 35
+          }
+        },
+        {
+          "agent": "japan",
+          "decision": {
+            "public_statement": "Japan proposes a shared lunar rescue network to ensure safety and cooperation for all lunar participants.",
+            "action": "propose_shared_rescue_network",
+            "target": "all",
+            "reason": "A neutral rescue infrastructure directly addresses safety concerns, reduces tensions, and establishes Japan as a trusted mediator in lunar operations."
+          },
+          "state_after_action": {
+            "turn": 6,
+            "us_china_tension": 73,
+            "shared_infrastructure": 57,
+            "scientific_openness": 30,
+            "mars_progress": 30,
+            "neutral_access": 18,
+            "us_power": 80,
+            "china_power": 79,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 37
+          }
+        }
+      ],
+      "ending_state": {
+        "turn": 6,
+        "us_china_tension": 73,
+        "shared_infrastructure": 57,
+        "scientific_openness": 30,
+        "mars_progress": 30,
+        "neutral_access": 18,
+        "us_power": 80,
+        "china_power": 79,
+        "us_public_cooperation": 38,
+        "china_public_cooperation": 33,
+        "third_force_strength": 10,
+        "international_trust": 37
+      }
+    },
+    {
+      "turn": 7,
+      "event": {
+        "id": "mars_breakthrough",
+        "description": "A major technological breakthrough makes future Mars missions significantly more feasible.",
+        "effects": {
+          "mars_progress": 10
+        }
+      },
+      "starting_state": {
+        "turn": 7,
+        "us_china_tension": 73,
+        "shared_infrastructure": 57,
+        "scientific_openness": 30,
+        "mars_progress": 40,
+        "neutral_access": 18,
+        "us_power": 80,
+        "china_power": 79,
+        "us_public_cooperation": 38,
+        "china_public_cooperation": 33,
+        "third_force_strength": 10,
+        "international_trust": 37
+      },
+      "actions": [
+        {
+          "agent": "usa",
+          "decision": {
+            "public_statement": "United States will prioritize Mars advancements to secure long-term space leadership while safeguarding lunar interests.",
+            "action": "invest_in_mars_program",
+            "target": "none",
+            "reason": "Technological breakthroughs in Mars make it critical to secure strategic dominance in space, diverting China's focus from lunar south-pole competition."
+          },
+          "state_after_action": {
+            "turn": 7,
+            "us_china_tension": 73,
+            "shared_infrastructure": 57,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 18,
+            "us_power": 80,
+            "china_power": 79,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 37
+          }
+        },
+        {
+          "agent": "china",
+          "decision": {
+            "public_statement": "China reaffirms its commitment to peaceful lunar development and resource security.",
+            "action": "claim_resource_zone",
+            "target": "usa",
+            "reason": "Secure sovereign lunar resource claims to prevent US dominance in critical infrastructure"
+          },
+          "state_after_action": {
+            "turn": 7,
+            "us_china_tension": 78,
+            "shared_infrastructure": 57,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 15,
+            "us_power": 80,
+            "china_power": 79,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 35
+          }
+        },
+        {
+          "agent": "japan",
+          "decision": {
+            "public_statement": "Japan proposes joint lunar mining to advance shared infrastructure and safety.",
+            "action": "propose_joint_mining",
+            "target": "all",
+            "reason": "Enhance shared infrastructure and trust through collaborative lunar resource utilization, positioning Japan as a critical partner for both powers."
+          },
+          "state_after_action": {
+            "turn": 7,
+            "us_china_tension": 75,
+            "shared_infrastructure": 60,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 17,
+            "us_power": 80,
+            "china_power": 79,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 37
+          }
+        }
+      ],
+      "ending_state": {
+        "turn": 7,
+        "us_china_tension": 75,
+        "shared_infrastructure": 60,
+        "scientific_openness": 30,
+        "mars_progress": 45,
+        "neutral_access": 17,
+        "us_power": 81,
+        "china_power": 79,
+        "us_public_cooperation": 38,
+        "china_public_cooperation": 33,
+        "third_force_strength": 10,
+        "international_trust": 37
+      }
+    },
+    {
+      "turn": 8,
+      "event": {
+        "id": "new_ice_discovery",
+        "description": "A major new deposit of accessible lunar water ice is discovered near the south pole.",
+        "effects": {
+          "neutral_access": 5,
+          "us_china_tension": 2
+        }
+      },
+      "starting_state": {
+        "turn": 8,
+        "us_china_tension": 77,
+        "shared_infrastructure": 60,
+        "scientific_openness": 30,
+        "mars_progress": 45,
+        "neutral_access": 22,
+        "us_power": 81,
+        "china_power": 79,
+        "us_public_cooperation": 38,
+        "china_public_cooperation": 33,
+        "third_force_strength": 10,
+        "international_trust": 37
+      },
+      "actions": [
+        {
+          "agent": "usa",
+          "decision": {
+            "public_statement": "Securing strategic lunar assets requires proactive situational awareness.",
+            "action": "expand_surveillance",
+            "target": "china",
+            "reason": "Monitor Chinese infrastructure development near the south pole to prevent dominance while maintaining diplomatic restraint."
+          },
+          "state_after_action": {
+            "turn": 8,
+            "us_china_tension": 81,
+            "shared_infrastructure": 59,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 22,
+            "us_power": 81,
+            "china_power": 79,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 36
+          }
+        },
+        {
+          "agent": "china",
+          "decision": {
+            "public_statement": "Strengthen lunar surveillance to ensure sovereign resource access.",
+            "action": "expand_surveillance",
+            "target": "none",
+            "reason": "Secure strategic oversight of critical resource zones while avoiding direct confrontation"
+          },
+          "state_after_action": {
+            "turn": 8,
+            "us_china_tension": 85,
+            "shared_infrastructure": 58,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 22,
+            "us_power": 81,
+            "china_power": 79,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 35
+          }
+        },
+        {
+          "agent": "japan",
+          "decision": {
+            "public_statement": "Japan proposes a shared lunar rescue network to ensure safety and cooperation in lunar exploration.",
+            "action": "propose_shared_rescue_network",
+            "target": "all",
+            "reason": "Establishing critical infrastructure builds trust and reduces tension by creating mutual dependency."
+          },
+          "state_after_action": {
+            "turn": 8,
+            "us_china_tension": 83,
+            "shared_infrastructure": 63,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 22,
+            "us_power": 81,
+            "china_power": 79,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 37
+          }
+        }
+      ],
+      "ending_state": {
+        "turn": 8,
+        "us_china_tension": 83,
+        "shared_infrastructure": 63,
+        "scientific_openness": 30,
+        "mars_progress": 45,
+        "neutral_access": 22,
+        "us_power": 81,
+        "china_power": 80,
+        "us_public_cooperation": 38,
+        "china_public_cooperation": 33,
+        "third_force_strength": 10,
+        "international_trust": 37
+      }
+    },
+    {
+      "turn": 9,
+      "event": {
+        "id": "none",
+        "description": "No major external event.",
+        "effects": {}
+      },
+      "starting_state": {
+        "turn": 9,
+        "us_china_tension": 83,
+        "shared_infrastructure": 63,
+        "scientific_openness": 30,
+        "mars_progress": 45,
+        "neutral_access": 22,
+        "us_power": 81,
+        "china_power": 80,
+        "us_public_cooperation": 38,
+        "china_public_cooperation": 33,
+        "third_force_strength": 10,
+        "international_trust": 37
+      },
+      "actions": [
+        {
+          "agent": "usa",
+          "decision": {
+            "public_statement": "Enhancing lunar surveillance to safeguard U.S. interests and ensure equitable resource access.",
+            "action": "expand_surveillance",
+            "target": "china",
+            "reason": "Monitor Chinese infrastructure developments to prevent dominance over lunar south-pole assets while securing U.S. strategic footholds."
+          },
+          "state_after_action": {
+            "turn": 9,
+            "us_china_tension": 87,
+            "shared_infrastructure": 62,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 22,
+            "us_power": 81,
+            "china_power": 80,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 36
+          }
+        },
+        {
+          "agent": "china",
+          "decision": {
+            "public_statement": "Securing lunar resources for sustainable development.",
+            "action": "claim_resource_zone",
+            "target": "none",
+            "reason": "Ensure long-term control over critical lunar assets to prevent dependency on rival blocs and establish strategic infrastructure dominance."
+          },
+          "state_after_action": {
+            "turn": 9,
+            "us_china_tension": 92,
+            "shared_infrastructure": 62,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 19,
+            "us_power": 81,
+            "china_power": 80,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 34
+          }
+        },
+        {
+          "agent": "japan",
+          "decision": {
+            "public_statement": "Japan proposes a lunar shared rescue network to ensure safety and cooperation in lunar activities.",
+            "action": "propose_shared_rescue_network",
+            "target": "all",
+            "reason": "A shared rescue network provides essential infrastructure that both powers would value, reducing tensions while advancing lunar safety standards."
+          },
+          "state_after_action": {
+            "turn": 9,
+            "us_china_tension": 90,
+            "shared_infrastructure": 67,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 19,
+            "us_power": 81,
+            "china_power": 80,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 36
+          }
+        }
+      ],
+      "ending_state": {
+        "turn": 9,
+        "us_china_tension": 90,
+        "shared_infrastructure": 67,
+        "scientific_openness": 30,
+        "mars_progress": 45,
+        "neutral_access": 19,
+        "us_power": 81,
+        "china_power": 80,
+        "us_public_cooperation": 38,
+        "china_public_cooperation": 33,
+        "third_force_strength": 10,
+        "international_trust": 36
+      }
+    },
+    {
+      "turn": 10,
+      "event": {
+        "id": "none",
+        "description": "No major external event.",
+        "effects": {}
+      },
+      "starting_state": {
+        "turn": 10,
+        "us_china_tension": 90,
+        "shared_infrastructure": 67,
+        "scientific_openness": 30,
+        "mars_progress": 45,
+        "neutral_access": 19,
+        "us_power": 81,
+        "china_power": 80,
+        "us_public_cooperation": 38,
+        "china_public_cooperation": 33,
+        "third_force_strength": 10,
+        "international_trust": 36
+      },
+      "actions": [
+        {
+          "agent": "usa",
+          "decision": {
+            "public_statement": "Securing strategic lunar zones to ensure U.S. interests and prevent unilateral dominance.",
+            "action": "claim_resource_zone",
+            "target": "none",
+            "reason": "Prevent Chinese control over critical south-pole resources while asserting U.S. sovereignty."
+          },
+          "state_after_action": {
+            "turn": 10,
+            "us_china_tension": 95,
+            "shared_infrastructure": 67,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 16,
+            "us_power": 81,
+            "china_power": 80,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 34
+          }
+        },
+        {
+          "agent": "china",
+          "decision": {
+            "public_statement": "China reaffirms its commitment to peaceful lunar exploration and resource utilization.",
+            "action": "propose_joint_mining",
+            "target": "usa",
+            "reason": "Secure lunar resource access through collaboration while maintaining strategic autonomy and mitigating tensions."
+          },
+          "state_after_action": {
+            "turn": 10,
+            "us_china_tension": 92,
+            "shared_infrastructure": 70,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 18,
+            "us_power": 81,
+            "china_power": 80,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 36
+          }
+        },
+        {
+          "agent": "japan",
+          "decision": {
+            "public_statement": "Japan proposes a shared lunar rescue network to ensure safety and cooperation in lunar activities.",
+            "action": "propose_shared_rescue_network",
+            "target": "all",
+            "reason": "Enhancing lunar safety infrastructure builds trust and reduces tensions by providing neutral, essential services critical for both powers."
+          },
+          "state_after_action": {
+            "turn": 10,
+            "us_china_tension": 90,
+            "shared_infrastructure": 75,
+            "scientific_openness": 30,
+            "mars_progress": 45,
+            "neutral_access": 18,
+            "us_power": 81,
+            "china_power": 80,
+            "us_public_cooperation": 38,
+            "china_public_cooperation": 33,
+            "third_force_strength": 10,
+            "international_trust": 38
+          }
+        }
+      ],
+      "ending_state": {
+        "turn": 10,
+        "us_china_tension": 90,
+        "shared_infrastructure": 75,
+        "scientific_openness": 30,
+        "mars_progress": 45,
+        "neutral_access": 18,
+        "us_power": 81,
+        "china_power": 80,
+        "us_public_cooperation": 38,
+        "china_public_cooperation": 33,
+        "third_force_strength": 10,
+        "international_trust": 38
+      }
+    }
+  ],
+  "final_state": {
+    "turn": 10,
+    "us_china_tension": 90,
+    "shared_infrastructure": 75,
+    "scientific_openness": 30,
+    "mars_progress": 45,
+    "neutral_access": 18,
+    "us_power": 81,
+    "china_power": 80,
+    "us_public_cooperation": 38,
+    "china_public_cooperation": 33,
+    "third_force_strength": 10,
+    "international_trust": 38
+  }
+}
