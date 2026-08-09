@@ -258,6 +258,7 @@ A suggested repository layout is:
 ``` text
 lunar-futures/
 ├── README.md
+├── README_JAPANESE.md
 ├── agents.json
 ├── simulation.py
 ├── batch_simulation.py
