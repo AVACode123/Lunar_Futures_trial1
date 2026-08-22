@@ -1,0 +1,14 @@
+.env.7gpu
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+artifacts/mvp-*/
+artifacts/production-1000/workers/
+artifacts/production-1000/logs/
+artifacts/production-1000/progress.json
+
+lunar_futures_production1000_results.tar.gz

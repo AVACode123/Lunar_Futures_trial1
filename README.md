@@ -313,6 +313,103 @@ Visualize the resulting state-space trajectories:
 python plot_futures.py
 ```
 
+## Trial1-1000x production snapshot
+
+Trial1-1000x is the reproducible production snapshot that expands the
+earlier 100-worldline Trial1 batch to **1,000 worldlines**.
+
+-   1,000 worldlines × 10 turns
+-   3 agents per turn, always ordered USA → China → Japan
+-   30,000 LLM decisions
+-   7 × NVIDIA RTX A5000
+-   7 independent Ollama replicas with worldline-level parallelism
+-   Model: Qwen3 8B, Q4_K_M
+-   Master seed: `20260821`
+-   No missing or duplicate run IDs
+-   All runs passed merge validation
+-   `merged/all_states.csv`: 11,000 state rows
+
+### Fixed provenance
+
+-   Ollama version: `0.32.15`
+-   Ollama image:
+    `ollama/ollama@sha256:57d60e686821ea81a7748a3ec8141308c8b8f95b27105713954abf7a6529e700`
+-   Qwen3 8B model digest:
+    `500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41`
+-   Model format and quantization: GGUF, Q4_K_M, 8.2B parameters
+-   Master seed: `20260821`
+-   Recorded configuration: `production-1000-lock.json`
+
+All seven replicas were verified to use the same Ollama image and model
+digest before the production run.
+
+### Results
+
+The lightweight merged results tracked by Git are:
+
+-   `artifacts/production-1000/merged/all_states.csv`
+-   `artifacts/production-1000/merged/manifest.json`
+
+The complete 1,000-run JSON dataset is distributed as the GitHub Release
+asset `lunar_futures_production1000_results.tar.gz`. Its SHA-256 and the
+checksums of every run JSON and merged result are recorded in
+`Trial1-1000x.SHA256SUMS`.
+
+### Reproduction
+
+Copy `.env.7gpu.example` to `.env.7gpu`, replace the seven GPU UUID
+placeholders, and start the digest-pinned Ollama replicas:
+
+``` bash
+sudo docker compose --env-file .env.7gpu \
+  -f compose.ollama-7gpu.yaml up -d
+```
+
+Ensure that `qwen3:8b` is present in every replica's model volume. Then
+run the seven workers and validated merge:
+
+``` bash
+NUM_RUNS=1000 \
+NUM_TURNS=10 \
+MASTER_SEED=20260821 \
+MODEL=qwen3:8b \
+EXPERIMENT_DIR="$PWD/artifacts/production-1000" \
+scripts/run_7_workers.sh
+```
+
+Progress can be monitored from another terminal with:
+
+``` bash
+scripts/progress.sh artifacts/production-1000
+```
+
+After obtaining the Release archive and extracting its result files into
+the repository layout, verify the snapshot with:
+
+``` bash
+sha256sum -c Trial1-1000x.SHA256SUMS
+```
+
+### Summary
+
+Across the 1,000 simulated futures, final geopolitical tension had a mean
+of 78.43 and a median of 83; mean trust was 44.60. An exploratory
+**composite** cold-war-like criterion was defined as all three of:
+
+-   tension >= 80
+-   trust <= 40
+-   neutral access <= 10
+
+Under that criterion, 273 of 1,000 worldlines (27.3%) were classified as
+cold-war-like outcomes. The 27.3% value is **not a forecast probability**.
+It is a simulation outcome specific to this model, agent prompts,
+state-transition rules, event probabilities, and production configuration.
+
+USA most frequently expanded surveillance, China most frequently made
+territorial claims, and Japan predominantly selected rescue actions. These
+results should likewise be interpreted as outputs of this exploratory
+simulation configuration, not as predictions of real-world behavior.
+
 ## Current status
 
 This repository contains an **early hackathon prototype**.

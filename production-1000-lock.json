@@ -1,0 +1,44 @@
+{
+  "recorded_at": "2026-08-21",
+  "ollama": {
+    "version": "0.32.15",
+    "image": "ollama/ollama@sha256:57d60e686821ea81a7748a3ec8141308c8b8f95b27105713954abf7a6529e700",
+    "image_id": "sha256:57d60e686821ea81a7748a3ec8141308c8b8f95b27105713954abf7a6529e700",
+    "created": "2026-08-20T00:24:45.267365858Z"
+  },
+  "model": {
+    "name": "qwen3:8b",
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "size_bytes": 5225388164,
+    "parameter_size": "8.2B",
+    "quantization_level": "Q4_K_M",
+    "format": "gguf",
+    "context_length": 40960
+  },
+  "replicas": {
+    "count": 7,
+    "endpoints": [
+      "http://127.0.0.1:11434",
+      "http://127.0.0.1:11435",
+      "http://127.0.0.1:11436",
+      "http://127.0.0.1:11437",
+      "http://127.0.0.1:11438",
+      "http://127.0.0.1:11439",
+      "http://127.0.0.1:11440"
+    ],
+    "image_ids_identical": true,
+    "model_digests_identical": true,
+    "reported_container_state": "healthy/running"
+  },
+  "preflight": {
+    "checked_at": "2026-08-21",
+    "compose_static_validation": "passed",
+    "endpoint_health_count": 7,
+    "endpoint_versions_identical": true,
+    "model_digests_identical": true,
+    "compose_gpu_uuid_mapping": "passed",
+    "host_gpu_count": 7,
+    "loaded_ollama_models": 0,
+    "host_compute_processes": 0
+  }
+}

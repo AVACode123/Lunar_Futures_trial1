@@ -277,6 +277,101 @@ python batch_simulation.py
 python plot_futures.py
 ```
 
+## Trial1-1000x production snapshot
+
+Trial1-1000xは、従来の100-worldline Trial1を**1,000 worldlines**へ拡張した、
+再現可能なproduction snapshotです。
+
+-   1,000 worldlines × 10 turns
+-   各turnでUSA → China → Japanの順に3 Agentが意思決定
+-   LLMによる意思決定30,000件
+-   7 × NVIDIA RTX A5000
+-   7個の独立Ollama replicaによるworldline単位の並列化
+-   Model: Qwen3 8B, Q4_K_M
+-   Master seed: `20260821`
+-   run IDの欠番・重複なし
+-   全runがmerge validationに合格
+-   `merged/all_states.csv`: 11,000 state rows
+
+### Fixed provenance（固定した来歴情報）
+
+-   Ollama version: `0.32.15`
+-   Ollama image:
+    `ollama/ollama@sha256:57d60e686821ea81a7748a3ec8141308c8b8f95b27105713954abf7a6529e700`
+-   Qwen3 8B model digest:
+    `500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41`
+-   Model format / quantization: GGUF, Q4_K_M, 8.2B parameters
+-   Master seed: `20260821`
+-   記録済み設定: `production-1000-lock.json`
+
+production実行前に、7 replicaすべてが同一のOllama imageとmodel digestを
+使用していることを確認しています。
+
+### Results（成果物）
+
+Gitで管理する軽量な統合結果は次の2ファイルです。
+
+-   `artifacts/production-1000/merged/all_states.csv`
+-   `artifacts/production-1000/merged/manifest.json`
+
+1,000個すべてのrun JSONは、GitHub Release asset
+`lunar_futures_production1000_results.tar.gz`として配布します。archive、
+各run JSON、merged resultのSHA-256は`Trial1-1000x.SHA256SUMS`に記録しています。
+
+### Reproduction（再現方法）
+
+`.env.7gpu.example`を`.env.7gpu`へコピーして7個のGPU UUIDを設定し、
+digest固定済みのOllama replicaを起動します。
+
+``` bash
+sudo docker compose --env-file .env.7gpu \
+  -f compose.ollama-7gpu.yaml up -d
+```
+
+各replicaのmodel volumeに`qwen3:8b`が存在することを確認した後、7 workerと
+検証付きmergeを実行します。
+
+``` bash
+NUM_RUNS=1000 \
+NUM_TURNS=10 \
+MASTER_SEED=20260821 \
+MODEL=qwen3:8b \
+EXPERIMENT_DIR="$PWD/artifacts/production-1000" \
+scripts/run_7_workers.sh
+```
+
+別ターミナルから進捗を確認できます。
+
+``` bash
+scripts/progress.sh artifacts/production-1000
+```
+
+Release archiveを取得し、その成果物をリポジトリ内の対応する配置へ展開した後、
+snapshot全体を検証します。
+
+``` bash
+sha256sum -c Trial1-1000x.SHA256SUMS
+```
+
+### Summary（主要結果）
+
+1,000本のsimulationにおける最終的なgeopolitical tensionは平均78.43、
+中央値83で、trustの平均は44.60でした。「米中冷戦化」に相当する探索的な
+**複合判定基準**として、次の3条件をすべて満たす場合を定義しました。
+
+-   tension >= 80
+-   trust <= 40
+-   neutral access <= 10
+
+この基準では1,000 worldlines中273本、27.3%がcold-war-like outcomeに
+分類されました。この27.3%は**将来の予測確率ではありません**。このmodel、
+Agent prompt、状態遷移ルール、event確率、production configurationに固有の
+simulation outcomeです。
+
+行動傾向として、USAは監視拡大、Chinaは領有権主張、Japanは救助行動を最も
+多く選択しました。これらも現実世界の行動予測ではなく、この探索的simulation
+configurationから得られた出力として解釈する必要があります。
+
 ## 現在の位置づけ
 
 本リポジトリは**ハッカソン向けの初期プロトタイプ**です。
